@@ -5,6 +5,7 @@ public class DriverProgram {
     public static void main(String[] args) {
         boolean keeploop = true;
 
+        Scanner sc = new Scanner(System.in);
         while (keeploop == true) {
             System.out.println("---------¡BIENVENIDO AL ERAS TOUR!---------");
             System.out.println("¿Qué desea hacer?");
@@ -16,7 +17,7 @@ public class DriverProgram {
             System.out.println("6. Código Especial");
             System.out.println("7. Salir");
 
-            Scanner sc = new Scanner(System.in);
+            
             int option = sc.nextInt();
             
             switch(option){ // este switch es para que el usuario pueda elegir la opción que desea
@@ -46,10 +47,9 @@ public class DriverProgram {
                 case 5:
                     continue;
                 case 6: // este case es para que el usuario pueda ingresar un código especial y se le asigne un ticket
-                    SpecialTicket specialTicket = new SpecialTicket();
                     System.out.println("Ingrese un número especial: ");
                     int n = sc.nextInt();
-                    if (specialTicket.isFibonacci(n)){
+                    if (SpecialTicket.isFibonacci(n)){
                         System.out.println("El código es correcto. ");
                         System.out.println("Tiene acceso a un espacio en la localidad 10 a $20,000.00");
                     }else{
