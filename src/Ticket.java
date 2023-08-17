@@ -6,10 +6,9 @@ public class Ticket {
     private int min;
     private int max;
 
-    public static boolean validateTicket(int ticket, int min, int max){
+    public  boolean validateTicket(int ticket, int min, int max){
         Random rand = new Random();
 
-        ticket_id = rand.nextInt((15000), 1);
         min = rand.nextInt((15000), 1);
         max = rand.nextInt((15000), 1);
 
