@@ -19,9 +19,9 @@ public class DriverProgram {
             Scanner sc = new Scanner(System.in);
             int option = sc.nextInt();
             
-            switch(option){
+            switch(option){ // este switch es para que el usuario pueda elegir la opción que desea
 
-                case 1:
+                case 1: // este case es para que el usuario pueda ingresar sus datos y se le asigne un ticket
                     Comprador comprador = new Comprador();
                     Ticket ticket = new Ticket();
                     comprador.realizarCompra();
@@ -45,7 +45,7 @@ public class DriverProgram {
                     continue;
                 case 5:
                     continue;
-                case 6:
+                case 6: // este case es para que el usuario pueda ingresar un código especial y se le asigne un ticket
                     SpecialTicket specialTicket = new SpecialTicket();
                     System.out.println("Ingrese un número especial: ");
                     int n = sc.nextInt();
@@ -56,7 +56,7 @@ public class DriverProgram {
                         System.out.println("El código está incorrecto.");
                     }
 
-                case 7:
+                case 7: // este case es para que el usuario pueda salir del programa
                     System.out.println("¡Gracias por usar Eras Tour!");
                     keeploop = false;
                 }

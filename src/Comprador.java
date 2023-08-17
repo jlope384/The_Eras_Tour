@@ -10,7 +10,7 @@ public class Comprador {
     public boolean canBuy;
 
 
-    public void realizarCompra() {
+    public void realizarCompra() { // este código lo que hace es pedir los datos del comprador y asignarlos a las variables de instancia
         Scanner sc = new Scanner(System.in);
         Random rd = new Random();
         System.out.println("Ingrese su nombre");
