@@ -10,7 +10,7 @@ public class DriverProgram {
             System.out.println("---------¡BIENVENIDO AL ERAS TOUR!---------");
             System.out.println("¿Qué desea hacer?");
             System.out.println("1. Nuevo comprador");
-            System.out.println("2. Nuevo solicitud de tickets");
+            System.out.println("2. Comprar boletos");
             System.out.println("3. Consultar disponibilidad total");
             System.out.println("4. Consultar disponibilidad por localidad");
             System.out.println("5. Reporte de caja");
