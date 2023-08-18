@@ -1,7 +1,6 @@
 import java.util.Scanner;
 import java.util.Random;
-
-public class Comprador {
+public class Comprador {// esta es la clase es comprador
     private String name;
     private String email;
     private int n_tickets;
