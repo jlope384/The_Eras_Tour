@@ -2,14 +2,13 @@ import java.util.Scanner;
 
 public class DriverProgram {
 
-    /**
-     * @param args
-     */
     public static void main(String[] args) {
         boolean keeploop = true;
         int totL1 = 0;
         int totL5 = 0;
         int totL10 = 0;
+        Localidad localidad = new Localidad();
+
         Scanner sc = new Scanner(System.in);
         while (keeploop == true) {
             System.out.println("---------¡BIENVENIDO AL ERAS TOUR!---------");
@@ -54,9 +53,9 @@ public class DriverProgram {
                             System.out.println("1. Localidad 1");
                             System.out.println("2. Localidad 5");
                             System.out.println("3. Localidad 10");
-                            int localidad = sc.nextInt();
+                            int selectoLoc = sc.nextInt();
 
-                            switch (localidad) {
+                            switch (selectoLoc) {
                                 case 1:
                                     // Crear una instancia de la clase Localidad para la Localidad 1
                                     Localidad localidad1 = new Localidad();
@@ -82,7 +81,7 @@ public class DriverProgram {
                     }
                     continue;
                 case 3:
-                    Localidad localidad = new Localidad();
+
                     totL1 = localidad.getTOTLocalidad1();
                     totL5 = localidad.getTOTLocalidad5();
                     totL10 = localidad.getTOTLocalidad10();

@@ -12,17 +12,17 @@ public class vender {
     }
 
     // Método para obtener el contador de boletos
-    private int getTicketCount() {
+    public int getTicketCount() {
         return ticketCount;
     }
 
     // Método para obtener el presupuesto
-    private int getPresupuesto() {
+    public int getPresupuesto() {
         return presupuesto;
     }
 
     // Método para validar boletos y presupuesto
-    private boolean validateTicket(int ticketCount, int presupuesto) {
+    public boolean validateTicket(int ticketCount, int presupuesto) {
         // Verificar si el contador de boletos o el presupuesto son menores o iguales a
         // cero
         if (ticketCount <= 0 || presupuesto <= 0) {
