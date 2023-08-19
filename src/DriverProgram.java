@@ -39,6 +39,32 @@ public class DriverProgram {
 
                     break;
                 case 2:
+                    comprador = new Comprador();
+                    if (comprador.canBuy == true) {
+                        System.out.println("¿Cuántos boletos desea comprar?");
+                        int nBoletos = sc.nextInt();
+                        System.out.println("¿En qué localidad desea comprar los boletos?");
+                        System.out.println("1. Localidad 1");
+                        System.out.println("2. Localidad 5");
+                        System.out.println("3. Localidad 10");
+                        int localidad = sc.nextInt();
+                        switch (localidad) {
+                            case 1:
+                                Localidad localidad1 = new Localidad();
+                                localidad1.comprarBoletos(nBoletos, 1);
+                                break;
+                            case 2:
+                                Localidad localidad5 = new Localidad();
+                                localidad5.comprarBoletos(nBoletos, 5);
+                                break;
+                            case 3:
+                                Localidad localidad10 = new Localidad();
+                                localidad10.comprarBoletos(nBoletos, 10);
+                                break;
+                        }
+                    } else {
+                        System.out.println("No puede comprar boletos.");
+                    }
                     continue;
                 case 3:
                     Localidad localidad = new Localidad();
@@ -54,6 +80,7 @@ public class DriverProgram {
                     System.out.println("Cantidad de asientos en Localidad 10: " + totL10);
                     continue;
                 case 5:
+                    System.out.println("Cantidad de asientos vendidos en Localidad 1: " + totL1);
                     continue;
                 case 6: // este case es para que el usuario pueda ingresar un código especial y se le
                         // asigne un ticket
