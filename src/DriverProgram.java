@@ -42,46 +42,42 @@ public class DriverProgram {
                 case 2:
                     // Crear una instancia de la clase Comprador
                     comprador = new Comprador();
-<<<<<<< HEAD
                     if (canBuy == true) {
-=======
+                        // Verificar si el comprador puede comprar boletos
+                        if (comprador.canBuy == true) {
+                            System.out.println("¿Cuántos boletos desea comprar?");
+                            int nBoletos = sc.nextInt();
+                            System.out.println("¿En qué localidad desea comprar los boletos?");
+                            System.out.println("1. Localidad 1");
+                            System.out.println("2. Localidad 5");
+                            System.out.println("3. Localidad 10");
+                            int localidad = sc.nextInt();
 
-                    // Verificar si el comprador puede comprar boletos
-                    if (comprador.canBuy == true) {
->>>>>>> 530429b8f0eb9d45aeea33a7721d28c87c6d670a
-                        System.out.println("¿Cuántos boletos desea comprar?");
-                        int nBoletos = sc.nextInt();
-                        System.out.println("¿En qué localidad desea comprar los boletos?");
-                        System.out.println("1. Localidad 1");
-                        System.out.println("2. Localidad 5");
-                        System.out.println("3. Localidad 10");
-                        int localidad = sc.nextInt();
-
-                        switch (localidad) {
-                            case 1:
-                                // Crear una instancia de la clase Localidad para la Localidad 1
-                                Localidad localidad1 = new Localidad();
-                                // Llamar al método comprarBoletos de la instancia localidad1
-                                localidad1.comprarBoletos(nBoletos, 1);
-                                break;
-                            case 2:
-                                // Crear una instancia de la clase Localidad para la Localidad 5
-                                Localidad localidad5 = new Localidad();
-                                // Llamar al método comprarBoletos de la instancia localidad5
-                                localidad5.comprarBoletos(nBoletos, 5);
-                                break;
-                            case 3:
-                                // Crear una instancia de la clase Localidad para la Localidad 10
-                                Localidad localidad10 = new Localidad();
-                                // Llamar al método comprarBoletos de la instancia localidad10
-                                localidad10.comprarBoletos(nBoletos, 10);
-                                break;
+                            switch (localidad) {
+                                case 1:
+                                    // Crear una instancia de la clase Localidad para la Localidad 1
+                                    Localidad localidad1 = new Localidad();
+                                    // Llamar al método comprarBoletos de la instancia localidad1
+                                    localidad1.comprarBoletos(nBoletos, 1);
+                                    break;
+                                case 2:
+                                    // Crear una instancia de la clase Localidad para la Localidad 5
+                                    Localidad localidad5 = new Localidad();
+                                    // Llamar al método comprarBoletos de la instancia localidad5
+                                    localidad5.comprarBoletos(nBoletos, 5);
+                                    break;
+                                case 3:
+                                    // Crear una instancia de la clase Localidad para la Localidad 10
+                                    Localidad localidad10 = new Localidad();
+                                    // Llamar al método comprarBoletos de la instancia localidad10
+                                    localidad10.comprarBoletos(nBoletos, 10);
+                                    break;
+                            }
+                        } else {
+                            System.out.println("No puede comprar boletos.");
                         }
-                    } else {
-                        System.out.println("No puede comprar boletos.");
                     }
                     continue;
-
                 case 3:
                     Localidad localidad = new Localidad();
                     totL1 = localidad.getTOTLocalidad1();
@@ -96,11 +92,11 @@ public class DriverProgram {
                     System.out.println("Cantidad de asientos en Localidad 10: " + totL10);
                     continue;
                 case 5:
-                    localidad = new Localidad();
+
                     System.out.println("Reporte de caja");
-                    System.out.println("Total de ventas en Localidad 1: " + (localidad.getTOTLocalidad1() * 1000));
-                    System.out.println("Total de ventas en Localidad 5: " + (localidad.getTOTLocalidad5() * 5000));
-                    System.out.println("Total de ventas en Localidad 10: " + (localidad.getTOTLocalidad10() * 10000));
+                    System.out.println("Total de ventas en Localidad 1: " + (totL1 * 1000));
+                    System.out.println("Total de ventas en Localidad 5: " + (totL5 * 5000));
+                    System.out.println("Total de ventas en Localidad 10: " + (totL10 * 10000));
                     continue;
                 case 6: // este case es para que el usuario pueda ingresar un código especial y se le
                         // asigne un ticket
