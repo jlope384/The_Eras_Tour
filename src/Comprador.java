@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import java.util.Random;
+
 public class Comprador {// esta es la clase es comprador
     private String name;
     private String email;
@@ -8,12 +9,11 @@ public class Comprador {// esta es la clase es comprador
     private int ticket_id;
     public boolean canBuy;
 
-
     public void realizarCompra() { // este código lo que hace es pedir los datos del comprador y
         Scanner sc = new Scanner(System.in);
         Random rd = new Random();
         System.out.println("Ingrese su nombre");
-        this.name = sc.nextLine();  // Usar this para asignar a la variable de instancia
+        this.name = sc.nextLine(); // Usar this para asignar a la variable de instancia
         System.out.println("Ingrese su correo");
         this.email = sc.nextLine(); // Opcionalmente, puedes hacer lo mismo para email
         System.out.println("Ingrese el número de tickets que desea comprar");
@@ -25,6 +25,10 @@ public class Comprador {// esta es la clase es comprador
 
     public String getName() {
         return this.name;
+    }
+
+    public String getEmail() {
+        return this.email;
     }
 
     public int getBudget() {
