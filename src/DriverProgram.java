@@ -100,7 +100,6 @@ public class DriverProgram {
 
                 case 7: // este case es para que el usuario pueda salir del programa
                     System.out.println("¡Gracias por usar Eras Tour!");
-                    keeploop = false;
             }
         }
     }
