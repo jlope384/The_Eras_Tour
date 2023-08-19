@@ -81,7 +81,11 @@ public class DriverProgram {
                     System.out.println("Cantidad de asientos en Localidad 10: " + totL10);
                     continue;
                 case 5:
-                    System.out.println("Cantidad de asientos vendidos en Localidad 1: " + totL1);
+                    localidad = new Localidad();
+                    System.out.println("Reporte de caja");
+                    System.out.println("Total de ventas en Localidad 1: " + (localidad.getTOTLocalidad1() * 1000));
+                    System.out.println("Total de ventas en Localidad 5: " + (localidad.getTOTLocalidad5() * 5000));
+                    System.out.println("Total de ventas en Localidad 10: " + (localidad.getTOTLocalidad10() * 10000));
                     continue;
                 case 6: // este case es para que el usuario pueda ingresar un código especial y se le
                         // asigne un ticket
