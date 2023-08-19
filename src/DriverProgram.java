@@ -39,7 +39,10 @@ public class DriverProgram {
 
                     break;
                 case 2:
+                    // Crear una instancia de la clase Comprador
                     comprador = new Comprador();
+
+                    // Verificar si el comprador puede comprar boletos
                     if (comprador.canBuy == true) {
                         System.out.println("¿Cuántos boletos desea comprar?");
                         int nBoletos = sc.nextInt();
@@ -48,17 +51,24 @@ public class DriverProgram {
                         System.out.println("2. Localidad 5");
                         System.out.println("3. Localidad 10");
                         int localidad = sc.nextInt();
+
                         switch (localidad) {
                             case 1:
+                                // Crear una instancia de la clase Localidad para la Localidad 1
                                 Localidad localidad1 = new Localidad();
+                                // Llamar al método comprarBoletos de la instancia localidad1
                                 localidad1.comprarBoletos(nBoletos, 1);
                                 break;
                             case 2:
+                                // Crear una instancia de la clase Localidad para la Localidad 5
                                 Localidad localidad5 = new Localidad();
+                                // Llamar al método comprarBoletos de la instancia localidad5
                                 localidad5.comprarBoletos(nBoletos, 5);
                                 break;
                             case 3:
+                                // Crear una instancia de la clase Localidad para la Localidad 10
                                 Localidad localidad10 = new Localidad();
+                                // Llamar al método comprarBoletos de la instancia localidad10
                                 localidad10.comprarBoletos(nBoletos, 10);
                                 break;
                         }
@@ -66,6 +76,7 @@ public class DriverProgram {
                         System.out.println("No puede comprar boletos.");
                     }
                     continue;
+
                 case 3:
                     Localidad localidad = new Localidad();
                     totL1 = localidad.getTOTLocalidad1();
