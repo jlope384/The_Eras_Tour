@@ -2,6 +2,9 @@ import java.util.Scanner;
 
 public class DriverProgram {
 
+    /**
+     * @param args
+     */
     public static void main(String[] args) {
         boolean keeploop = true;
         int totL1 = 0;
@@ -42,13 +45,9 @@ public class DriverProgram {
                 case 2:
                     // Crear una instancia de la clase Comprador
                     comprador = new Comprador();
-<<<<<<< HEAD
+                    // Llamar al método validateTicket de la instancia comprador
                     if (canBuy == true) {
-=======
-
-                    // Verificar si el comprador puede comprar boletos
-                    if (comprador.canBuy == true) {
->>>>>>> 530429b8f0eb9d45aeea33a7721d28c87c6d670a
+                    
                         System.out.println("¿Cuántos boletos desea comprar?");
                         int nBoletos = sc.nextInt();
                         System.out.println("¿En qué localidad desea comprar los boletos?");
@@ -77,11 +76,11 @@ public class DriverProgram {
                                 localidad10.comprarBoletos(nBoletos, 10);
                                 break;
                         }
-                    } else {
+                    }else {
                         System.out.println("No puede comprar boletos.");
                     }
-                    continue;
-
+                    break;
+                    
                 case 3:
                     Localidad localidad = new Localidad();
                     totL1 = localidad.getTOTLocalidad1();
@@ -120,3 +119,5 @@ public class DriverProgram {
     }
 
 }
+
+
