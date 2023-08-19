@@ -20,6 +20,7 @@ public class DriverProgram {
             System.out.println("7. Salir");
 
             int option = sc.nextInt();
+            boolean canBuy = false;
 
             switch (option) { // este switch es para que el usuario pueda elegir la opción que desea
 
@@ -31,16 +32,16 @@ public class DriverProgram {
                     System.out.println("ID de ticket: " + comprador.getTicket_id());
                     if (ticket.validateTicket(comprador.getTicket_id(), 1, 15000)) {
                         System.out.println("Su ticket  es apto para comprar boletos.");
-                        comprador.canBuy = true;
+                        canBuy = true;
                     } else {
                         System.out.println("Su ticket no es apto para comprar boletos.");
-                        comprador.canBuy = false;
+                        canBuy = false;
                     }
 
                     break;
                 case 2:
                     comprador = new Comprador();
-                    if (comprador.canBuy == true) {
+                    if (canBuy == true) {
                         System.out.println("¿Cuántos boletos desea comprar?");
                         int nBoletos = sc.nextInt();
                         System.out.println("¿En qué localidad desea comprar los boletos?");
