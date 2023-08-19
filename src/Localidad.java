@@ -58,4 +58,7 @@ public class Localidad {
             System.out.println("No se encuentran mas asientos disponibles, Buena suerte la proxima ");
         }
     }
+
+    public void comprarBoletos(int nBoletos, int i) {
+    }
 }
